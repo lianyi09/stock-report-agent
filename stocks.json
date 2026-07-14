@@ -1,0 +1,30 @@
+{
+  "stocks": {
+    "tech": {
+      "label": "科技",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "GOOGL",
+        "AMZN",
+        "META",
+        "TSLA"
+      ]
+    },
+    "index_etf": {
+      "label": "指数ETF",
+      "symbols": [
+        "QQQ",
+        "SPY",
+        "DIA"
+      ]
+    }
+  },
+  "market_indices": {
+    "sp500": "^GSPC",
+    "nasdaq": "^IXIC",
+    "dow": "^DJI",
+    "vix": "^VIX"
+  }
+}
