@@ -75,8 +75,10 @@ def run():
     # 4. 计算排名和总结
     logger.info(">>> 步骤3: 计算涨跌排名...")
     rankings = compute_rankings(stocks_data)
-    logger.info(f"    涨幅TOP3: {[(s['symbol'], f\"{s['change_pct']:+.2f}%\") for s in rankings['top_gainers'][:3]]}")
-    logger.info(f"    跌幅TOP3: {[(s['symbol'], f\"{s['change_pct']:+.2f}%\") for s in rankings['top_losers'][:3]]}")
+    gainers = [(s['symbol'], round(s['change_pct'], 2)) for s in rankings['top_gainers'][:3]]
+    losers = [(s['symbol'], round(s['change_pct'], 2)) for s in rankings['top_losers'][:3]]
+    logger.info(f"    涨幅TOP3: {gainers}")
+    logger.info(f"    跌幅TOP3: {losers}")
 
     summary = generate_summary(stocks_data, indices_data)
 
